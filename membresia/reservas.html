@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Alquiler de Vehículos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Reservas de Vehículos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dashboard.html">Pagina Principal</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="logout.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Reservas Activas -->
+        <section class="reservas-activas">
+            <h2>Reservas Activas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehículo</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Fin</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sedán Deportivo</td>
+                        <td>2023-10-15</td>
+                        <td>2023-10-20</td>
+                        <td>Activa</td>
+                        <td>
+                            <button class="btn btn-cancelar">Cancelar</button>
+                            <button class="btn btn-modificar">Modificar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SUV Familiar</td>
+                        <td>2023-10-25</td>
+                        <td>2023-10-30</td>
+                        <td>Activa</td>
+                        <td>
+                            <button class="btn btn-cancelar">Cancelar</button>
+                            <button class="btn btn-modificar">Modificar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de Nueva Reserva -->
+        <section class="nueva-reserva">
+            <h2>Nueva Reserva</h2>
+            <form action="#" method="post">
+                <label for="vehiculo">Vehículo:</label>
+                <select id="vehiculo" name="vehiculo" required>
+                    <option value="">Selecciona un vehículo</option>
+                    <option value="sedan">Sedán Deportivo</option>
+                    <option value="suv">SUV Familiar</option>
+                    <option value="pickup">Pickup 4x4</option>
+                </select>
+
+                <label for="fecha-inicio">Fecha de Inicio:</label>
+                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+
+                <label for="fecha-fin">Fecha de Fin:</label>
+                <input type="date" id="fecha-fin" name="fecha-fin" required>
+
+                <button type="submit" class="btn">Reservar Ahora</button>
+            </form>
+        </section>
+
+        <!-- Sección de Historial de Reservas -->
+        <section class="historial-reservas">
+            <h2>Historial de Reservas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehículo</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Fin</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sedán Deportivo</td>
+                        <td>2023-09-10</td>
+                        <td>2023-09-15</td>
+                        <td>Completada</td>
+                    </tr>
+                    <tr>
+                        <td>Pickup 4x4</td>
+                        <td>2023-08-20</td>
+                        <td>2023-08-25</td>
+                        <td>Completada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Alquiler de Vehículos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

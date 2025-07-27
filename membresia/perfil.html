@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - Alquiler de Vehículos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perfil de Usuario</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="dashboard.html">Pagina Principal</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="logout.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Información Personal -->
+        <section class="informacion-personal">
+            <h2>Información Personal</h2>
+            <div class="perfil-datos">
+                <p><strong>Nombre:</strong> Juan Pérez</p>
+                <p><strong>Correo Electrónico:</strong> juan.perez@example.com</p>
+                <p><strong>Teléfono:</strong> +123 456 7890</p>
+                <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
+            </div>
+            <button class="btn">Editar Perfil</button>
+        </section>
+
+        <!-- Sección de Historial de Reservas -->
+        <section class="historial-reservas">
+            <h2>Historial de Reservas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehículo</th>
+                        <th>Fecha de Inicio</th>
+                        <th>Fecha de Fin</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sedán Deportivo</td>
+                        <td>2023-10-15</td>
+                        <td>2023-10-20</td>
+                        <td>Completada</td>
+                    </tr>
+                    <tr>
+                        <td>SUV Familiar</td>
+                        <td>2023-10-25</td>
+                        <td>2023-10-30</td>
+                        <td>Activa</td>
+                    </tr>
+                    <tr>
+                        <td>Pickup 4x4</td>
+                        <td>2023-11-05</td>
+                        <td>2023-11-10</td>
+                        <td>Pendiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de Vehículos Favoritos -->
+        <section class="vehiculos-favoritos">
+            <h2>Vehículos Favoritos</h2>
+            <div class="vehiculos-grid">
+                <div class="vehiculo">
+                    <img src="images/carro1.jpg" alt="Sedán Deportivo">
+                    <h3>Sedán Deportivo</h3>
+                    <p>Precio: $50/día</p>
+                    <button class="btn">Reservar Ahora</button>
+                </div>
+                <div class="vehiculo">
+                    <img src="images/carro2.jpg" alt="SUV Familiar">
+                    <h3>SUV Familiar</h3>
+                    <p>Precio: $70/día</p>
+                    <button class="btn">Reservar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Configuración de la Cuenta -->
+        <section class="configuracion-cuenta">
+            <h2>Configuración de la Cuenta</h2>
+            <ul>
+                <li><a href="#">Cambiar Contraseña</a></li>
+                <li><a href="#">Actualizar Información de Contacto</a></li>
+                <li><a href="#">Eliminar Cuenta</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Alquiler de Vehículos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

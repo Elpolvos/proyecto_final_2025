@@ -1,0 +1,602 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para la sección de membresías */
+.membresias {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.membresias h2 {
+    margin-bottom: 40px;
+}
+
+.membresias-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.membresia {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.membresia h3 {
+    margin-top: 0;
+}
+
+.membresia .precio {
+    font-size: 1.5em;
+    color: #ff6600;
+    margin: 15px 0;
+}
+
+.membresia ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.membresia ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.membresia ul li:last-child {
+    border-bottom: none;
+}
+
+.membresia.premium {
+    border: 2px solid #ff6600;
+    background-color: #fff3e6;
+}
+
+.membresia.premium .precio {
+    color: #e65c00;
+}
+
+/* Estilos para el botón de membresía */
+.membresia .btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.membresia .btn:hover {
+    background-color: #e65c00;
+}
+
+/* Estilos para la sección Hero */
+.hero {
+    background-image: url('imagenes/126926-camioneta-neumaticos_para_automoviles-neumatico-tope-exterior_del_automotor-1920x1080.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color:#ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    height: 400px; /* Altura fija para la sección Hero */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilos para la sección de Llamado a la Acción */
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    margin-bottom: 30px;
+}
+/* Estilos para la sección de Beneficios */
+.beneficios {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.beneficios-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.beneficio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.beneficio h3 {
+    margin-top: 0;
+}
+
+/* Estilos para la sección de Vehículos Destacados */
+.vehiculos-destacados {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.vehiculos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vehiculo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.vehiculo img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.vehiculo h3 {
+    margin: 10px 0;
+}
+
+.vehiculo p {
+    margin: 5px 0;
+}
+
+/* Estilos para la sección de Llamado a la Acción */
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    margin-bottom: 30px;
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e65c00;
+}
+
+/* Estilos para los formularios de inicio de sesión y registro */
+.formulario {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.formulario h2 {
+    margin-top: 0;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+    background-color: #e65c00;
+}
+
+.formulario p {
+    margin-top: 15px;
+}
+
+.formulario a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.formulario a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para las secciones de beneficios */
+.beneficios-login, .beneficios-registro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.beneficios-login h2, .beneficios-registro h2 {
+    margin-top: 0;
+}
+
+.beneficios-login ul, .beneficios-registro ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios-login ul li, .beneficios-registro ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.beneficios-login ul li:last-child, .beneficios-registro ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para el dashboard de alquiler de vehículos */
+.bienvenida {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.vehiculos-disponibles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.vehiculo {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vehiculo img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.vehiculo h3 {
+    margin: 10px 0;
+}
+
+.vehiculo p {
+    margin: 5px 0;
+}
+
+.reservas-activas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.reservas-activas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservas-activas th, .reservas-activas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.reservas-activas th {
+    background-color: #f4f4f4;
+}
+
+.beneficios {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.beneficios ul li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para la página de perfil de usuario */
+.informacion-personal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.perfil-datos p {
+    margin: 10px 0;
+}
+
+.historial-reservas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.historial-reservas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historial-reservas th, .historial-reservas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.historial-reservas th {
+    background-color: #f4f4f4;
+}
+
+.vehiculos-favoritos {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.vehiculos-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.vehiculo {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.vehiculo img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.vehiculo h3 {
+    margin: 10px 0;
+}
+
+.vehiculo p {
+    margin: 5px 0;
+}
+
+.configuracion-cuenta {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.configuracion-cuenta ul {
+    list-style: none;
+    padding: 0;
+}
+
+.configuracion-cuenta ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.configuracion-cuenta ul li:last-child {
+    border-bottom: none;
+}
+
+.configuracion-cuenta ul li a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.configuracion-cuenta ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la página de reservas */
+.reservas-activas, .nueva-reserva, .historial-reservas {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.reservas-activas h2, .nueva-reserva h2, .historial-reservas h2 {
+    margin-top: 0;
+}
+
+.reservas-activas table, .historial-reservas table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.reservas-activas th, .reservas-activas td, .historial-reservas th, .historial-reservas td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.reservas-activas th, .historial-reservas th {
+    background-color: #f4f4f4;
+}
+
+.reservas-activas .btn-cancelar {
+    background-color: #ff4d4d;
+    margin-right: 5px;
+}
+
+.reservas-activas .btn-cancelar:hover {
+    background-color: #cc0000;
+}
+
+.reservas-activas .btn-modificar {
+    background-color: #4d79ff;
+}
+
+.reservas-activas .btn-modificar:hover {
+    background-color: #0039e6;
+}
+
+.nueva-reserva form {
+    display: flex;
+    flex-direction: column;
+}
+
+.nueva-reserva label {
+    margin-bottom: 5px;
+}
+
+.nueva-reserva input, .nueva-reserva select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nueva-reserva button {
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nueva-reserva button:hover {
+    background-color: #e65c00;
+}
