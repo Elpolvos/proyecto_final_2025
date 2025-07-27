@@ -20,98 +20,86 @@
     </header>
 
     <main>
-        <!-- Sección de Reservas Activas -->
-        <section class="reservas-activas">
-            <h2>Reservas Activas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Vehículo</th>
-                        <th>Fecha de Inicio</th>
-                        <th>Fecha de Fin</th>
-                        <th>Estado</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sedán Deportivo</td>
-                        <td>2023-10-15</td>
-                        <td>2023-10-20</td>
-                        <td>Activa</td>
-                        <td>
-                            <button class="btn btn-cancelar">Cancelar</button>
-                            <button class="btn btn-modificar">Modificar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SUV Familiar</td>
-                        <td>2023-10-25</td>
-                        <td>2023-10-30</td>
-                        <td>Activa</td>
-                        <td>
-                            <button class="btn btn-cancelar">Cancelar</button>
-                            <button class="btn btn-modificar">Modificar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
         <!-- Sección de Nueva Reserva -->
         <section class="nueva-reserva">
             <h2>Nueva Reserva</h2>
-            <form action="#" method="post">
-                <label for="vehiculo">Vehículo:</label>
-                <select id="vehiculo" name="vehiculo" required>
+            <form id="reserva-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="segundo_nombre">Segundo Nombre:</label>
+                <input type="text" id="segundo_nombre" name="segundo_nombre">
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="segundo_apellido">Segundo Apellido:</label>
+                <input type="text" id="segundo_apellido" name="segundo_apellido">
+
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="modelo_auto">Vehículo:</label>
+                <select id="modelo_auto" name="modelo_auto" required>
                     <option value="">Selecciona un vehículo</option>
-                    <option value="sedan">Sedán Deportivo</option>
-                    <option value="suv">SUV Familiar</option>
-                    <option value="pickup">Pickup 4x4</option>
+                    <option value="Toyota Corolla">Toyota Corolla</option>
+                    <option value="Honda Civic">Honda Civic</option>
+                    <option value="Ford Mustang">Ford Mustang</option>
                 </select>
 
-                <label for="fecha-inicio">Fecha de Inicio:</label>
-                <input type="date" id="fecha-inicio" name="fecha-inicio" required>
+                <label for="metodo_pago">Método de Pago:</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="">Selecciona un método de pago</option>
+                    <option value="Tarjeta de Credito">Tarjeta de Crédito</option>
+                    <option value="Dinero en Efectivo">Dinero en Efectivo</option>
+                    <option value="Divisas">Divisas</option>
+                </select>
 
-                <label for="fecha-fin">Fecha de Fin:</label>
-                <input type="date" id="fecha-fin" name="fecha-fin" required>
+                <label for="total">Total:</label>
+                <input type="number" id="total" name="total" required>
 
                 <button type="submit" class="btn">Reservar Ahora</button>
             </form>
-        </section>
-
-        <!-- Sección de Historial de Reservas -->
-        <section class="historial-reservas">
-            <h2>Historial de Reservas</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Vehículo</th>
-                        <th>Fecha de Inicio</th>
-                        <th>Fecha de Fin</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sedán Deportivo</td>
-                        <td>2023-09-10</td>
-                        <td>2023-09-15</td>
-                        <td>Completada</td>
-                    </tr>
-                    <tr>
-                        <td>Pickup 4x4</td>
-                        <td>2023-08-20</td>
-                        <td>2023-08-25</td>
-                        <td>Completada</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div id="reserva-resultado"></div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2023 Alquiler de Vehículos. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('reserva-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch('http://localhost:5001/alquiler', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+            const resultadoDiv = document.getElementById('reserva-resultado');
+
+            if (response.ok) {
+                resultadoDiv.innerHTML = `<p>¡Reserva creada con éxito! ID de alquiler: ${result.alquiler_id}</p>
+                                          <a href="http://localhost:5001/alquiler/${result.alquiler_id}/pdf" class="btn">Descargar PDF</a>`;
+            } else {
+                resultadoDiv.innerHTML = `<p>Error al crear la reserva: ${result.error}</p>`;
+            }
+        });
+    </script>
 </body>
 </html>
