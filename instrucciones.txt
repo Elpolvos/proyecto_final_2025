@@ -1,0 +1,11 @@
+Para ejecutar este proyecto, sigue los siguientes pasos:
+
+1. Asegúrate de tener Python 3 y pip instalados.
+2. Abre una terminal en la raíz del proyecto.
+3. Instala las dependencias de Python ejecutando el siguiente comando:
+   pip install -r backend/requirements.txt
+4. Inicia el servidor de backend ejecutando el siguiente comando:
+   python3 backend/app.py
+5. Abre el archivo `membresia/reservas.html` en tu navegador para interactuar con la aplicación.
+
+El backend se ejecutará en http://localhost:5001.
